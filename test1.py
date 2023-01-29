@@ -25,7 +25,7 @@ result, encimg = cv2.imencode('.webp', img, params)
 img_bytes = encimg.tobytes()
 
 # Connect to S3 and upload the image
-s3 = boto3.client('s3', aws_access_key_id='AKIAR56QI6RTALXWK3G3',
-        aws_secret_access_key='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')
+s3 = boto3.client('s3', aws_access_key_id='',
+        aws_secret_access_key='')
 s3.put_object(Bucket='my-s3-datofbucket1', Key='image_EX.webp', Body=img_bytes)
 
