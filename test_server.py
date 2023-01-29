@@ -297,8 +297,8 @@ def show_images():
 
     # lấy danh sách url các file ảnh có trong thư mục bookmarks
     session = boto3.Session(
-        aws_access_key_id='AKIAR56QI6RTALXWK3G3',
-        aws_secret_access_key='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',
+        aws_access_key_id='',
+        aws_secret_access_key='',
         region_name='ap-northeast-1'
     )
     client = session.client('s3', endpoint_url='https://s3.ap-northeast-1.amazonaws.com')
