@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    
+    <meta charset="UFT-8">
+    <title>HOME PAGE</title>
+    
+    <link rel='stylesheet' type = 'text/css' href = '../static/styles/styles_main.css'>
+    <script src = '../static/js/main_page.js'></script>
+</head>
+<body>
+    <div class = 'body_container'>
+        <div id = 'left'>
+            <div id = 'body_control'>
+                <div id = 'body_control_top'>
+                    <div id = 'text_VisualAI'>
+                    <a href = '/'>
+                     <article id = 'text_VisualAI'>
+                        <h4 id = 'text_VisualAI'> VisualAI</h4>
+                    </article>
+                    </a>
+                    </div>
+                    
+                    <div id = 'home_button' >
+                        <a href="/main_page">
+                            <button id = 'home_button'><ion-icon name="home-outline"></ion-icon></button>
+                        </a>
+                        <h5 id = 'Text_Home'>Home</h5>
+                    </div >
+                    <div id = 'fullfile' >
+                        <a href='/images'>
+                            <button id = 'fullfile_button'><ion-icon name="images-outline"></ion-icon></button>
+                        </a>
+                        <h5 id = 'Text_fullfile'>Images</h5>
+                    </div >
+
+                    <div id = 'bookmarks' >
+                        <a href='/bookmarks'>
+                            <button id = 'bookmarks_button'><ion-icon id ='bookmark-icon' name="bookmark-outline"></ion-icon></button>
+                        </a>
+                        <h5 id = 'Text_bookmarks'>Bookmarks</h5>
+                    </div >
+
+                </div>
+                <div id = 'body_control_bottom'>
+                    <div id = 'Help&FAQ' >
+                        <a href='/Help&FAQ'>
+                            <button id = 'Help&FAQ_button'><ion-icon name="help-outline"></ion-icon></button>
+                        </a>
+                        <h5 id = 'Text_Help&FAQ'>Help&FAQ</h5>
+                    </div >
+                </div>
+            </div>
+
+        </div>
+        <div id = 'right'>
+            <div class="inputBox">
+                <form action="/main_page" methods= "POST" class = 'form'>
+                    <input id ='input' type="text" name = "text" required="required">
+                    <span>画像にしたい文章を入力して下さい</span>
+                    <button type='button1'><ion-icon name="search-outline" ></ion-icon></button>
+                    <button type='button2'  onclick="randomText()"><ion-icon name="dice-outline"></ion-icon></button>
+                </form>
+            </div>
+            <div class='ImgTG_container'>
+                
+                
+                {% if user_image %}
+                
+                <button id = 'button1_download' onclick="downloadImage('{{ url_for('static', filename=user_image) }}')"><ion-icon name="download-outline"></ion-icon></button>
+                
+                <button id="bookmarks-button1"><ion-icon name="bookmark-outline"></ion-icon></button>
+                <img id = 'img1' src="{{ url_for('static', filename=user_image) }}" alt="User Image">
+                
+                {% endif %}
+                {% if user_image %}
+                
+                <button id = 'button2_download' onclick="downloadImage('{{ url_for('static', filename=user_image1) }}')"><ion-icon name="download-outline"></ion-icon></button>
+                
+                <button id="bookmarks-button2"><ion-icon name="bookmark-outline"></ion-icon></button>
+                <img id = 'img2' src="{{ url_for('static', filename=user_image1) }}" alt="User Image">
+                {% endif %}
+                {% if user_image %}
+                
+                <button id = 'button3_download' onclick="downloadImage('{{ url_for('static', filename=user_image2) }}')"><ion-icon name="download-outline"></ion-icon></button>
+                
+                <button id="bookmarks-button3"><ion-icon name="bookmark-outline"></ion-icon></button>
+                <img id = 'img3' src="{{ url_for('static', filename=user_image2) }}" alt="User Image">
+                {% endif %}
+                
+                
+            </div>
+            <div class="hero-container">
+                <div class="main-container">
+                  <div class="poster-container">
+                    <a href="#"><img src="../static/Style1.png" class="poster1" /></a>
+                  </div>
+                  <div class="ticket-container">
+                    <div class="ticket__content">
+                      <h5 class="ticket__movie-title"> ファンタジー イラスト </h5>
+                      <button id="add-button1" class="ticket__with">適用</button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="main-container">
+                  <div class="poster-container">
+                    <a href="#"><img src="../static/Style2.png" class="poster2" /></a>
+                  </div>
+                  <div class="ticket-container">
+                    <div class="ticket__content">
+                      <h5 class="ticket__movie-title"> アニメ </h5>
+                      <button id="add-button2" class="ticket__with">適用</button>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="main-container">
+                  <div class="poster-container">
+                    <a href="#"><img src="../static/Style3.png" class="poster3" /></a>
+                  </div>
+                  <div class="ticket-container">
+                    <div class="ticket__content">
+                      <h5 class="ticket__movie-title">建築デザイン</h5>
+                      <button id="add-button3" class="ticket__with">適用</button>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="main-container">
+                  <div class="poster-container">
+                    <a href="#"><img src="../static/Style4.png" class="poster4" /></a>
+                  </div>
+                  <div class="ticket-container">
+                    <div class="ticket__content">
+                      <h5 class="ticket__movie-title">サイバーパンク</h5>
+                      <button id="add-button4" class="ticket__with">適用</button>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="main-container">
+                  <div class="poster-container">
+                    <a href="#"><img src="../static/Style5.png" class="poster5" /></a>
+                  </div>
+                  <div class="ticket-container">
+                    <div class="ticket__content">
+                      <h5 class="ticket__movie-title">魔法の自然</h5>
+                      <button id="add-button5" class="ticket__with">適用</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+        </div>
+    </div>
+    <script>
+
+        // bookmarks
+        const button1 = document.getElementById('bookmarks-button1');
+        const image1 = document.getElementById('img1');
+        const button2 = document.getElementById('bookmarks-button2');
+        const image2 = document.getElementById('img2');
+        const button3 = document.getElementById('bookmarks-button3');
+        const image3 = document.getElementById('img3');
+        button1.addEventListener('click', () => {
+          const imagePath1 = image1.src;
+            
+          // Tạo yêu cầu POST tới bookmarks
+          const xhr = new XMLHttpRequest();
+          xhr.open('POST', '/addBM');
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          xhr.onload = () => console.log(xhr.responseText);
+          xhr.send(`image_path=${imagePath1}`);
+        });
+        button2.addEventListener('click', () => {
+          const imagePath2 = image2.src;
+      
+          // Tạo yêu cầu POST tới addBM
+          const xhr = new XMLHttpRequest();
+          xhr.open('POST', '/addBM');
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          xhr.onload = () => console.log(xhr.responseText);
+          xhr.send(`image_path=${imagePath2}`);
+        });
+        button3.addEventListener('click', () => {
+          const imagePath3 = image3.src;
+      
+          // Tạo yêu cầu POST tới addBM
+          const xhr = new XMLHttpRequest();
+          xhr.open('POST', '/addBM');
+          xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+          xhr.onload = () => console.log(xhr.responseText);
+          xhr.send(`image_path=${imagePath3}`);
+        });
+    </script>
+
+
+    <script>
+      function downloadImage(imageUrl) {
+        var link = document.createElement("a");
+        link.download = "image.jpg";
+        link.href = imageUrl;
+        link.click();
+      }
+    </script>
+
+    <script>function sendRequest() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("response").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "/random", true);
+        xhttp.send();
+      }
+      document.getElementById('add-button1').addEventListener('click', function() {
+      document.getElementById('input').value = 'Style1';
+    });
+      document.getElementById('add-button2').addEventListener('click', function() {
+      document.getElementById('input').value = 'Style2';
+    });
+      document.getElementById('add-button3').addEventListener('click', function() {
+      document.getElementById('input').value = 'Style3';
+    });
+      document.getElementById('add-button4').addEventListener('click', function() {
+      document.getElementById('input').value = 'Style4';
+    });
+      document.getElementById('add-button5').addEventListener('click', function() {
+      document.getElementById('input').value = 'Style5';
+    });</script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>

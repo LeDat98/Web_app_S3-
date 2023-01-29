@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    
+    <meta charset="UFT-8">
+    <title>Input Text Animation</title>
+    
+    <link rel='stylesheet' type = 'text/css' href = '../static/styles/styles3.css'>
+</head>
+<body>
+  <div>
+    <img class = 'header_background' src ='../static/AI_Background_2.png'>
+    <article>
+      <h1>Text To Image</h1>
+      <p>文章から<font size = '6'>AI</font>で画像を作成</p>
+  </article>
+  </div>
+  <main>
+    <div class="hero-container">
+      <div class="main-container">
+        <div class="poster-container">
+          <a href="#"><img src="../static/Style1.png" class="poster1" /></a>
+        </div>
+        <div class="ticket-container">
+          <div class="ticket__content">
+            <h5 class="ticket__movie-title"> Style1</h5>
+            <button class="ticket__with">適用</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="main-container">
+        <div class="poster-container">
+          <a href="#"><img src="../static/Style2.png" class="poster2" /></a>
+        </div>
+        <div class="ticket-container">
+          <div class="ticket__content">
+            <h5 class="ticket__movie-title"> Style2</h5>
+            <button class="ticket__with">適用</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-container">
+        <div class="poster-container">
+          <a href="#"><img src="../static/Style3.png" class="poster3" /></a>
+        </div>
+        <div class="ticket-container">
+          <div class="ticket__content">
+            <h5 class="ticket__movie-title">Style3</h5>
+            <button class="ticket__with">適用</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-container">
+        <div class="poster-container">
+          <a href="#"><img src="../static/Style4.png" class="poster4" /></a>
+        </div>
+        <div class="ticket-container">
+          <div class="ticket__content">
+            <h5 class="ticket__movie-title">Style4</h5>
+            <button class="ticket__with">適用</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-container">
+        <div class="poster-container">
+          <a href="#"><img src="../static/Style5.png" class="poster5" /></a>
+        </div>
+        <div class="ticket-container">
+          <div class="ticket__content">
+            <h5 class="ticket__movie-title">Style5</h5>
+            <button class="ticket__with">適用</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="inputBox">
+        <form action="/" methods= "POST" class = 'form'>
+          
+            <input id ='input' type="text" name = "text" required="required">
+            <span>画像にしたい文章を入力して下さい</span>
+            <button type='button1'><ion-icon name="search-outline" ></ion-icon></button>
+
+            <!-- <input type="submit" name="submit" value="Search"> -->
+            <button type='button2'  onclick="randomText()"><ion-icon name="dice-outline"></ion-icon></button>
+        </form>
+    </div>
+    <div class='result_part'>
+      {% if msg %}
+      <div class='result_title'><b type="msg1">Kết quả nhận diện</b></div>
+      <div class='result_id'>{{ msg }}</div>
+      <div class='img_cont'>
+      {% if user_image %}
+      <img style="max-width:512px; height:512px; border-radius:1rem" src="{{ url_for('static', filename=user_image) }}" alt="User Image">
+      {% endif %}
+      {% if user_image1 %}
+      <img style="max-width:512px; height:512px; border-radius:1rem" src="{{ url_for('static', filename=user_image1) }}" alt="User Image">
+      {% endif %}
+
+      </div>
+      {% endif %}
+    </div>
+    <div class = 'grid-container'>
+
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/1.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt1</h5>
+            <a id = 'a'>astral landscape,astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/2.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/3.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/4.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/5.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/6.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/7.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/8.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/10.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+       
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/11.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/12.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/13.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/14.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/15.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/16.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+       
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/17.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/19.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+        
+      </div>
+      <div class = 'imgbody'>
+        <div class = 'inner_img'>
+          <img class = 'img1' src='../static/img_bk/20.png'>
+          <div class = 'prompt'>
+            <h5 id= 'h5'>Prompt2</h5>
+            <a id = 'a'>astral landscape, snow, winter very detailed mechanical yule full-body yule picking up red flowers, cinematic</a>
+          </div>
+        </div>
+     
+      </div>
+    </div>
+
+    
+      <script>
+        const texts = ['very complex hyper-maximalist overdetailed cinematic tribal darkfantasy closeup portrait of a malignant beautiful young dragon queen goddess megan fox with long black windblown hair and dragon scale wings, Magic the gathering, pale skin and dark eyes,flirting smiling succubus confident seductive, gothic, windblown hair, vibrant high contrast, by andrei riabovitchev, tomasz alen kopera,moleksandra shchaslyva, peter mohrbacher, Omnious intricate, octane, moebius, arney freytag, Fashion photo shoot, glamorous pose, trending on ArtStation, dramatic lighting, ice, fire and smoke, orthodox symbolism Diesel punk, mist, ambient occlusion, volumetric lighting, Lord of the rings, BioShock, glamorous, emotional, tattoos,shot in the photo studio, professional studio lighting, backlit, rim lightingDeviant-art, hyper detailed illustration, 8k',
+        'city made out of glass : : close shot : : 3 5 mm, realism, octane render, 8 k, exploration, cinematic, trending on artstation, realistic, 3 5 mm camera, unreal engine, hyper detailed, photo – realistic maximum detail, volumetric light, moody cinematic epic concept art, realistic matte painting, hyper photorealistic, concept art, volumetric light, cinematic epic, octane render, 8 k, corona render, movie concept art, octane render, 8 k, corona render, cinematic, trending on artstation, movie concept art, cinematic composition, ultra - detailed, realistic, hyper - realistic, volumetric lighting, 8 k',
+        'environment living room interior, mid century modern, indoor garden with fountain, retro,m vintage, designer furniture made of wood and plastic, concrete table, wood walls, indoor potted tree, large window, outdoor forest landscape, beautiful sunset, cinematic, concept art, sunstainable architecture, octane render, utopia, ethereal, cinematic light, -ar 16:9 -stylize 45000',
+        'ancient scroll diagram, bold shūji, chart, schematics, infographic, scientific, measurements, abstract, surreal, collage, new media design, poster, colorful highlights, tarot card, glowing ruins, marginalia, 8k, extremely detailed::1 style of Katsuhiro Otomo + Masamune Shirow::0.8 pantone, on black canvas, typography annotations::0.3 -ar 3:5 -q 2 -chaos 15',
+        'futuristic nighttime cyberpunk New York City skyline landscape vista photography by Carr Clifton & Galen Rowell, 16K resolution, Landscape veduta photo by Dustin Lefevre & tdraw, 8k resolution, detailed landscape painting by Ivan Shishkin, DeviantArt, Flickr, rendered in Enscape, Miyazaki, Nausicaa Ghibli, Breath of The Wild, 4k detailed post processing, atmospheric, hyper realistic, 8k, epic composition, cinematic, artstation —ar 16:9'];
+        function randomText() {
+          // Lấy ngẫu nhiên một dòng văn bản từ mảng texts
+          const randomIndex = Math.floor(Math.random() * texts.length);
+          const randomText = texts[randomIndex];
+          
+          // Đưa dòng văn bản ngẫu nhiên vào tag input
+          document.getElementById('input').value = randomText;
+        }
+        function sendRequest() {
+          var xhttp = new XMLHttpRequest();
+          xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+              document.getElementById("response").innerHTML = this.responseText;
+            }
+          };
+          xhttp.open("GET", "/random", true);
+          xhttp.send();
+        }
+        document.getElementById('add-button1').addEventListener('click', function() {
+        document.getElementById('input-field').value = 'Style1';
+      });
+        document.getElementById('add-button2').addEventListener('click', function() {
+        document.getElementById('input-field').value = 'Style2';
+      });
+        document.getElementById('add-button3').addEventListener('click', function() {
+        document.getElementById('input-field').value = 'Style3';
+      });
+        document.getElementById('add-button4').addEventListener('click', function() {
+        document.getElementById('input-field').value = 'Style4';
+      });
+        document.getElementById('add-button5').addEventListener('click', function() {
+        document.getElementById('input-field').value = 'Style5';
+      });
+        
+      </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </main>
+</body>c
+</html>
+
+
+    

@@ -1,0 +1,39 @@
+<html>
+  <head>
+    <title>Filterable Div Elements</title>
+  </head>
+  <body>
+    <input type="text" id="input_field" placeholder="Enter your search query">
+    <div>
+      <img src="../static/Style1.png">
+      <p>This is the first div element</p>
+    </div>
+    <div>
+      <img src="../static/Style2.png">
+      <p>This is the second div element</p>
+    </div>
+    <div>
+      <img src="../static/Style3.png">
+      <p>This is the third div element</p>
+    </div>
+    <div>
+      <img src="../static/Style4.png">
+      <p>This is the fourth div element</p>
+    </div>
+    <script>
+        const inputField = document.getElementById('input_field');
+        inputField.addEventListener('input', () => {
+            console.log('Input field value changed');
+        const divElements = document.querySelectorAll('div p');
+        divElements.forEach((div) => {
+        if (div.innerText.includes(inputField.value)) {
+        div.parentNode.style.display = 'block';
+        } else {
+        div.parentNode.style.display = 'none';
+        }
+        });
+        });
+
+    </script>
+  </body>
+</html>

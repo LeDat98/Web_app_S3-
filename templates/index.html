@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+    <title>My html</title>
+    <style>
+        body{
+            /* background-image: url('../static/LG_AI3full.png'); */
+            background-size: cover;
+            background-color: floralwhite;
+        }
+        .Text {
+            position: absolute;
+            z-index: 2;
+            left: 20%;
+            top:50%;
+            transform: translate(-50%,-50%);
+        }
+        img{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 50%;
+            top:50%;
+            transform: translate(-50%,-50%);
+            z-index: 0;
+        }
+
+        article {
+            position: absolute;
+            z-index: 6;
+            top: -321%;
+            left: 140%;
+            transform: translate(-50%,-50%);
+            background: linear-gradient(
+
+            to right, 
+            #f4c496, 
+            #f4c496
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            
+        }
+        
+        h1 {
+            
+            font-size: 6.5vmin;
+            line-height: 0.9;
+            width: 440px;
+            
+        }
+        
+        h1, p {
+            margin: 0;
+            
+        }
+        
+        p {
+            font-family: "Dank Mono", ui-monospace, monospace;
+            text-align: left;
+            column-count: 2;
+            column-gap: 30px;
+            width: 440px;
+            
+            
+        }
+        article:hover {
+            position: absolute;
+            z-index: 6;
+            top: -321%;
+            left: 140%;
+            transform: translate(-50%,-50%);
+            background: linear-gradient(
+
+            to right, 
+            #f4ee96, 
+            #f4e896
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            
+        }
+        
+        h1 {
+            
+            font-size: 6.5vmin;
+            line-height: 0.9;
+            width: 440px;
+            
+        }
+        
+        h1, p {
+            margin: 0;
+            
+        }
+        
+        p {
+            font-family: "Dank Mono", ui-monospace, monospace;
+            text-align: left;
+            column-count: 2;
+            column-gap: 30px;
+            width: 440px;
+            
+            
+        }
+        
+        .button{
+            border: 2px solid #895b5f;
+            position: relative;
+            z-index: 3;
+            width: 150px;
+            height: 50px;
+            top: -52px;
+            left: 208px;
+            transform: translate(-50%,-50%);
+            border-radius: 50px;
+            background-color: rgba(255, 255, 255, 0);
+
+        }
+        .button:hover{
+            position: relative;
+            z-index: 3;
+            width: 150px;
+            height: 50px;
+            top: -52px;
+            left: 208px;
+            transform: translate(-50%,-50%);
+            background: linear-gradient(
+
+            to right, 
+            #e2d5a7, 
+            #c77c7b
+            );
+            border-radius: 50px;
+            
+        }
+        .kinou1 {
+            position:absolute;
+            z-index: 2;
+            width: 400px;
+            left: 10%;
+            top:-5%;
+
+        }
+        .kinou2 {
+            
+            position:absolute;
+            z-index: 2;
+            width: 400px;
+            left: 10%;
+            top:380%;
+
+        }
+        
+        .container1{
+            
+            position: absolute;
+            left: 0%;
+            z-index: 2;
+            display: flex;
+            margin: 10px;
+        }
+        .container1 div[id='KEY1_CONT']{
+            width: 170px;
+            height: 180px;
+        }
+        .container1 div[id='Key1_cont']{
+            width: 170px;
+            height: auto;
+            display:flex;
+        }
+        .container1 h6[id='key1.1']{
+            width: 50px;
+            height: 50px;
+            position: relative;
+            left: 30%;
+            padding: 5px;
+            margin: 5px;
+            background-color: azure;
+            color: #020202;
+            border-radius: 10px;
+        }
+        .container1 h6[id='key1']{
+            width: 50px;
+            height: 50px;
+            background-color: azure;
+            padding: 5px;
+            color: #020202;
+            border-radius: 10px;
+            margin: 5px;
+        }
+        .container1 div[ id = 'OR_cont']{
+            width: 170px;
+            
+        }
+        .container1 p[id ='OR']{
+            width: 20px;
+            position: relative;
+            left: 44%;
+        }
+        .container1 div[id = '+_cont']{
+            width: 20px;
+            height: 50px;
+            margin: 5px;
+            
+        }
+        .container1 p[id = '+']{
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            position: relative;
+            top: 45%;
+            text-align: center;
+        }
+        .container1 h4[id='key2']{
+            width: 50px;
+            height: 120px;
+            background-color: rgba(240, 255, 255, 0);
+            padding: 5px;
+            color: #ffffff;
+            border-radius: 10px;
+            text-align: center;
+            top:20%;
+        }
+        .container1 h6[id='KEY3']{
+            width: 50px;
+            height: 120px;
+            background-color: rgba(240, 255, 255, 0);
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .container1 h6[id='key3']{
+            width: 50px;
+            height: 50px;
+            background-color: azure;
+            padding: 5px;
+            color: #020202;
+            border-radius: 10px;
+        }
+        .container1 div[id ='img_cont']{
+            width: 60px;
+            height: 180px;
+            
+        }
+        .container1 div[id ='img']{
+            width: 60px;
+            height: 60px;
+            background-image: url('https://s3.ap-northeast-1.amazonaws.com/my-s3-datofbucket1/static/image_system/image_system/imagesitem.png?AWSAccessKeyId=AKIAR56QI6RTALXWK3G3&Signature=hrJLeu8detMrIUWpB4E9QfT1ek0%3D&Expires=1675000966');
+            background-size: cover;
+            border-radius: 10px ;
+            position: absolute;
+            top:38%;
+        }
+    </style>
+
+</html>
+<body>
+    <!-- <img src="../static/LG_AI3full.png" > -->
+    <img class = 'mid_img' src="https://s3.ap-northeast-1.amazonaws.com/my-s3-datofbucket1/static/image_system/image_system/LP_AI2.png.webp?AWSAccessKeyId=AKIAR56QI6RTALXWK3G3&Signature=DLR3viLhnWmRYwgqo7Yt8yB0w4E%3D&Expires=1675001053">
+    <div class = 'Text'>
+        <div class="BG_text">
+            <article>
+              <h1> VisualAI </h1>
+            </br>
+              <p><font size ='2'>私たちのAIユーザーのコンセプトデザインサービスは、ユーザーが基本的なアイデアを入力し、
+                それらのアイデアのイメージシミュレーションを生成するためにAI技術を使用するオンラインツールを提供します。
+                ユーザーは、デザインプロジェクト、アート、またはその他の想像力を高めたい目的のためにこのツールを使用することができます。
+                このツールは、ユーザーが新しいアイデアやより創造的なスローガンを発見するのを助けるだけでなく、
+                ユーザーにアクションを起こすよう促すヒントやボタンも提供します。</font></p>
+            </article>
+        </div>
+        <a href="/main_page">
+            <button class = 'button'><font color = 'white' size="4">START</button>
+        </a>
+        <div>
+            <ul>
+            <li class = 'kinou1'><font size='2'>機能1：アイデアの画像シミュレーション。この機能は、ユーザーが基本的なアイデアを入力し、
+                それらのアイデアの画像シミュレーションを生成するためにAI技術を使用することを可能にします。
+                これは、ユーザーが思考を促進し、新しいアイデアを発見するのを助けることができます。</font>
+            </li>
+            <div class = 'container1'>
+                <div id="KEY1_CONT">
+                </br>
+                <h6 id = 'key1.1'>画像にしたい文章を入力１</h6>
+                <div id = 'OR_cont'> 
+                <p id = 'OR'>OR</p>
+                </div>
+                <div id = 'Key1_cont'>
+                <h6 id = 'key1'>修理したい画像</h6>
+                <div id = '+_cont'>
+                <p id = '+'>+</p>
+                </div>
+                <h6 id = 'key1'>修理命令を入力</h6>
+                </div>
+                </div>
+                <h4 id = 'key2'></br></br></br>==></h4>
+                <div id ='KEY3'>
+                </br></br>
+                <h6 id = 'key3'></br>AIが作成</h6>
+                </div>
+                <h4 id = 'key2'></br></br></br>==></h4>
+                <div id = 'img_cont'>
+                </br>
+                        <div id = 'img'>
+                <!-- <img id = 'img' src="../static/imagesitem.png"></img> -->
+                </div>
+                </div>
+            </div>
+            <li class="kinou2"><font size='2'>機能2：ヒントやアクションを促すボタンの提供。
+                この機能は、ユーザーがより創造的なスローガンを発見し、アクションを起こすよう促すヒントやボタンを提供します。
+                これにより、ユーザーは創造力を維持し、アイデアのブロックによって妨げられないようにすることができます。</font>
+            </li>
+
+
+            </ul>
+        </div>
+        
+        
+    </div>
+    
+</body>

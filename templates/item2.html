@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+    <meta charset="UFT-8">
+    <title>Input Text Animation</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/styles2.css') }}">  
+</head>
+<body>
+    <article>
+        <h1>Text To Image</h1>
+        <p>好きな文章を入力してください</p>
+      </article>
+    <div class="inputBox">
+        <form action="/" methods= "POST">
+          
+            <input type="text" name = "text" required="required" id="input-field">
+            <span>ここに入力して下さい</span>
+            <input type="submit" name="submit" value="Search">
+            <button id="add-button1" type="button" name="action" value="add">style1</button>
+            <button id="add-button2" type="button" name="action" value="add">style2</button>
+            <button id="add-button3" type="button" name="action" value="add">style3</button>
+            <button id="add-button4" type="button" name="action" value="add">style4</button>
+            <button id="add-button5" type="button" name="action" value="add">style5</button>
+        </from>
+         
+    </div>
+    <div class='result_part'>
+        {% if msg %}
+        <div class='result_title'><b type="msg1">Kết quả nhận diện</b></div>
+        <div class='result_id'>{{ msg }}</div>
+        {% if random %}
+        <div class="result_id">{{ random }}<div>
+        {% endif %}
+        {% if user_image %}
+        <img style="max-width:560px; border-radius:1rem" src="{{ url_for('static', filename=user_image) }}"
+             alt="User Image">
+        {% endif %}
+        {% endif %}
+    
+    </div>
+    <script>
+    function sendRequest() {
+      var xhttp = new XMLHttpRequest();
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          document.getElementById("response").innerHTML = this.responseText;
+        }
+      };
+      xhttp.open("GET", "/random", true);
+      xhttp.send();
+    }
+    document.getElementById('add-button1').addEventListener('click', function() {
+    document.getElementById('input-field').value = 'Style1';
+  });
+    document.getElementById('add-button2').addEventListener('click', function() {
+    document.getElementById('input-field').value = 'Style2';
+  });
+    document.getElementById('add-button3').addEventListener('click', function() {
+    document.getElementById('input-field').value = 'Style3';
+  });
+    document.getElementById('add-button4').addEventListener('click', function() {
+    document.getElementById('input-field').value = 'Style4';
+  });
+    document.getElementById('add-button5').addEventListener('click', function() {
+    document.getElementById('input-field').value = 'Style5';
+  });
+  </script>
+</body>
+</html>
