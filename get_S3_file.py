@@ -1,7 +1,7 @@
 import boto3
 ##Lấy đường link của tất cả các file có trong thư mục static/images trên S3 
-s3 = boto3.client('s3', aws_access_key_id='AKIAR56QI6RTALXWK3G3',
-        aws_secret_access_key='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')
+s3 = boto3.client('s3', aws_access_key_id='',
+        aws_secret_access_key='')
 
 bucket_name = 'my-s3-datofbucket1'
 prefix = 'static/images/'
