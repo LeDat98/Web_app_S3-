@@ -1,0 +1,6 @@
+Opencv cần chạy lệnh sau để install 
+Ubuntu/Debian:
+sudo apt-get install libgl1-mesa-dev
+
+CentOS/Fedora:
+sudo yum install mesa-libGL-devel
