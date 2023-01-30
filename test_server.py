@@ -15,8 +15,8 @@ app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = "static/images"
 app.config['UPLOAD_FOLDER2'] = "static/bookmarks"
 # Connect to S3
-s3 = boto3.client('s3', aws_access_key_id='AKIAR56QI6RTALXWK3G3',
-        aws_secret_access_key='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')
+s3 = boto3.client('s3', aws_access_key_id='',
+        aws_secret_access_key='')
 
 
 @app.route('/')
@@ -244,8 +244,8 @@ def show_bookmars():
 
     # lấy danh sách url các file ảnh có trong thư mục bookmarks
     session = boto3.Session(
-        aws_access_key_id='AKIAR56QI6RTALXWK3G3',
-        aws_secret_access_key='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',
+        aws_access_key_id='',
+        aws_secret_access_key='',
         region_name='ap-northeast-1'
     )
     client = session.client('s3', endpoint_url='https://s3.ap-northeast-1.amazonaws.com')
@@ -297,8 +297,8 @@ def show_images():
 
     # lấy danh sách url các file ảnh có trong thư mục bookmarks
     session = boto3.Session(
-        aws_access_key_id='AKIAR56QI6RTALXWK3G3',
-        aws_secret_access_key='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',
+        aws_access_key_id='',
+        aws_secret_access_key='',
         region_name='ap-northeast-1'
     )
     client = session.client('s3', endpoint_url='https://s3.ap-northeast-1.amazonaws.com')
